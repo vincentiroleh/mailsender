@@ -1,0 +1,26 @@
+<script>
+    const addNewEmail = document.getElementById("addNewEmail");
+    const emailHolder = document.getElementById("emailHolder");
+
+    addNewEmail.addEventListener('click', ()=> {
+      const allEmailInputs = document.querySelectorAll('input[type=email]');
+      if (allEmailInputs.length < 9 ) {
+         const emailInput = document.createElement('input');
+          emailInput.setAttribute("type", "email");
+          emailInput.setAttribute("placeholder", "Enter Email");
+          emailInput.setAttribute("name", "email");
+          emailInput.className = "form-control mb-2";
+          emailHolder.appendChild(emailInput);
+  
+          if ((allEmailInputs.length + 1) >= 9) {
+            $("#addMore").addClass('d-none')
+          }
+      }
+    })
+</script>
+
+<script type="text/javascript" src="js/bootstrap.jquery.js"></script>
+<script type="text/javascript" src="js/popper.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

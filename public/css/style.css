@@ -1,0 +1,49 @@
+body {
+  background: rgb(231, 231, 231);
+  height: 500px;
+}
+
+div.contain {
+  min-height: 300px;
+  width: 40%;
+  padding: 30px;
+  border-radius: 30px;
+  margin: auto;
+  background-color: white;
+}
+div.contain2 {
+  height: 600px;
+  width: 40%;
+  padding: 30px;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: white;
+}
+div button.button {
+  background-color: maroon;
+  color: white;
+  box-shadow: 2px 2px maroon;
+}
+button.button:hover {
+  color: white;
+}
+span a.color,
+.text {
+  color: maroon;
+}
+input:focus {
+  background-color: maroon;
+}
+
+.text2 {
+  margin-top: 150px;
+}
+button.color2 {
+  background-color: white;
+  color: maroon;
+}
+a.btn-my-btn{
+  background-color: white;
+  color: maroon;
+}

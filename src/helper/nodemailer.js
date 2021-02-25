@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 
 require('dotenv').config();
 
-async function mailer(to, subject, text) {
+async function mailer(bcc, subject, text) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -13,8 +13,10 @@ async function mailer(to, subject, text) {
   });
 
   const info = await transporter.sendMail({
-    from: `${process.env.app_name} <${process.env.user}>`,
-    to,
+    // from: `${process.env.app_name} <${process.env.user}>`,
+    from: 'JourneyBuilder <noreply@gmail.com>',
+    replyTo: 'noreply@gmail.com',
+    bcc,
     subject,
     text,
   });
